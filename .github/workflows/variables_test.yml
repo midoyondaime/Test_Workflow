@@ -44,7 +44,7 @@ jobs:
           echo ${{ env.FROMAT_ENV }}
           
       - name: function and always status check
-        if: ${{ startsWith(env.aString,"this") && always() }}
+        if: ${{ startsWith(env.aString,'this') && always() }}
         run: sleep 60
 
       - name: test cancel check status
