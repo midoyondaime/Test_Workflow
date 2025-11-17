@@ -30,7 +30,7 @@ jobs:
         run: this job will not run since the boolean is false
 
       - name: contains function
-        if: ${{ contains(env.aString,"this") }}
+        if: ${{ contains(env.aString,'this') }}
         run: |
           echo "our string var contains the word 'this' "
           echos "some"
