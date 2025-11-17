@@ -1,6 +1,5 @@
 name: workflow_overview
 
-
 on:
  workflow_dispatch:
  push:
@@ -10,7 +9,7 @@ on:
 
 jobs:
   my_self_hosted_job:
-   name: my self job
+   name: my self job hosted
    runs-on: self-hosted
    steps:
       - name: name of my step
