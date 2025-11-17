@@ -3,9 +3,24 @@ name: workflow_overview
 
 on:
  workflow_dispatch:
+ push:
+  branches:
+   -main
 
 
 jobs:
+  my_self_hosted_job:
+   name: my self job
+   runs-on: self-hosted
+   steps:
+      - name: name of my step
+        id: stepId
+        shell: cmd
+        run: |
+         echo this is a multiline command
+         echo here we go again
+         echo heyooo
+   
   a_simple_job:
     name: my simple job
     runs-on: ubuntu-latest
@@ -17,3 +32,4 @@ jobs:
         id: ShellId
         shell: python
         run: print("This is my second step ")
+  
