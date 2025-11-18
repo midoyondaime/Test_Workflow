@@ -1,4 +1,4 @@
-name: matrix_strategies
+name: matrix
 
 on:
   push:
