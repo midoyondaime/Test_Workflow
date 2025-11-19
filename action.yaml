@@ -12,7 +12,7 @@ outputs:
   result:
     value: ${{ steps.sum-result.outputs.result }}
     
-run:
+runs:
   using: "composite"
   steps:
     - shell: bash
@@ -20,5 +20,5 @@ run:
       run: |
         num1=${{ inputs.number1 }}
         num2=${{ inputs.number2 }}
-        result=${{num1+num2}}
-        echo "result=$result" >> "GITHUB_OUTPUT"
+        result=$((num1+num2))
+        echo "result=$result" >> "$GITHUB_OUTPUT"
